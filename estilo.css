@@ -1,5 +1,8 @@
 @charset 'UTF-8';
 
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap ');
+/*FONTE = MARHEY*/
+
 
 :root{
     --azul_claro: rgb(0, 172, 230);
@@ -13,7 +16,17 @@
 
 body{
     margin: 0px; /*tira as margens de qualquer contéudo*/
+    font-family: 'Marhey', Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(imagens/nuvem.png);
 }
+
+
+
+#container{
+    text-align: center;
+}
+
+
 
 #menu_topo{
     width: 100%; /* ocupa 100% da largura da página */
@@ -24,19 +37,23 @@ body{
     align-items: center;
 }
 
-#caixa_menus{
-    display: flex;
-    
-    
-    
+
+#menu_topo > img{
+    margin-left: 10px;
 }
 
+
+#caixa_menus{
+    display: flex;
+
+}
+
+
 .item_menu{
-    margin-right: 20px;
-    background-color: var(--vermelho);
+    margin-right: 10px;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
     padding-left: 30px;
     padding-right: 30px;
     border-radius: 40px 0px 40px 40px;
@@ -45,8 +62,72 @@ body{
    
 }
 
+
 .item_menu:hover{
     cursor: pointer;
     background-color: var(--amarelo_canário);
     transition: 0.2s;
+    color: black;
 }
+
+
+.menu_ativado{
+    background-color: var(--vermelho);
+}
+
+
+#banner{
+    width: 100%;
+    height: 40vw; /* médida vw representa toda a médida do navegador, 100% da página*/
+    background-image: url(imagens/criancas.jpg);
+    background-size: cover; /* ajusta o tamanho da imagem que está de fundo */ /* COVER -> faz com que a imagem se ajuste ao tamanho da tela*/
+    /* Para centralizar a div , é necessário utilizar os três comandos abaixo*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+
+#mensagem{
+    background-color: rgba(0, 173, 230, 0.6);
+    color: white;
+    font-size: 20px;
+    padding: 40px;
+    text-align: center;
+    width: 800px;
+    height: 250px;
+    border-radius: 70px 20px ;
+
+}
+
+#secao_01{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+    text-align: left;
+    gap: 90px;
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+    
+
+}
+
+
+#crianca_secao_01{
+    background-image: url(imagens/criancas2.jpg);
+    width: 450px;
+    height: 350px;
+    background-size: cover;
+    border-radius: 70px 20px;
+}
+
+
+#conteudo_secao_01 > h1{
+    font-size: 40px;
+}
+
+
+
