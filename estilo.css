@@ -12,7 +12,6 @@
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css');
 /* ICONE DO MAPA/LOCALIZAÇÃO */
 
-
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
 /* LOGO FACEBOOK */
 
@@ -25,7 +24,7 @@
 @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
 /* LOGO X */
 
-@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 /* ICONE DE CONFIGURAÇÕES NO MOBILE/TABLET */
 
 
@@ -44,7 +43,6 @@ body{
     font-family: 'Marhey', Verdana, Geneva, Tahoma, sans-serif;
     background-image: url(imagens/nuvem.png);
 }
-
 
 
 #container{
@@ -127,6 +125,11 @@ body{
 
 }
 
+#mensagem p{
+    font-size: 30px;
+}
+
+
 #secao_01, #secao_02{
     display: flex;
     justify-content: center;
@@ -155,10 +158,12 @@ body{
     
 }
 
+
 #conteudo_secao_01 > p{
     margin-left: 15px;
     
 }
+
 
 #crianca_secao_02{
     width: 60%;
@@ -170,6 +175,7 @@ body{
 
 }
 
+
 #conteudo_secao_02{
     background-color: var(--verde_limão);
     width: 40%;
@@ -178,6 +184,7 @@ body{
     text-align: left;
 }
 
+
 #conteudo_secao_02 h1{
     margin-top: 50px;
     margin-left: 30px;
@@ -185,12 +192,14 @@ body{
     
 }
 
+
 #conteudo_secao_02 p{
     margin-top: 50px;
     margin-left: 30px;
     margin-right: 30px;
     
 }
+
 
 #rodape{
     background-color: var(--azul_claro);
@@ -201,6 +210,7 @@ body{
     flex-wrap: wrap;
     padding-bottom: 20px;
 }
+
 
 .conteudos_rodape{
     width: 33%;
@@ -237,10 +247,11 @@ body{
     color: var(--branco);
 }
 
+
 #menu_mobile_tablet{
-    background-color: red;
+    background-color: var(--azul_claro);
     height: 70px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: left;
     padding-left: 30px;
@@ -249,7 +260,50 @@ body{
     display: none;
 }
 
-/* configuração de responsividade para smartphones */
+#menu_mobile_tablet:hover{
+    cursor: pointer;
+}
+
+#menu_lateral{
+    background-color: var(--azul_claro);
+    width: 250px;
+    margin-left: -400px;
+    height: 100vh;  /* vh -> vertical height */
+    position: fixed;
+    box-shadow: 8px 0px 20px black;
+    transition: all 0.7s;
+}
+
+
+.aparecer{
+    margin-left: 0px !important;
+}
+
+
+#menu_lateral h1{
+    font-family: Arial;
+    color: var(--branco);
+    /* border: 1px solid red; */
+    width: 25px;
+    margin-left: 200px;
+}
+
+
+/* formatando os elementos que estão dentro da classe item menu */
+#menu_lateral .item_menu{
+    color: var(--branco);
+    width: 100px;
+    justify-content: center;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+#menu_lateral h1:hover{
+    cursor: pointer;
+}
+
+
+/* CONFIGURAÇÃO PARA SMARPHONES */
 @media screen and (max-width: 480px){ 
     #menu_mobile_tablet{
         display: flex;
@@ -257,14 +311,169 @@ body{
     #menu_topo{
         display: none;
     }
+
+    /* cofigurando para tela de TELEFONE */
+
+    /* configurando mensagem */
+    #mensagem{
+        padding: 6px;
+        width: 80%;
+        height: 110px;
+    }
+    
+    #mensagem h1{
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    #mensagem p{
+        font-size: 14px;
+        line-height: 13px;
+    }
+    /* fim da configuração da mensagem */
+
+
+    /* configurando seção 01 */
+    #secao_01{
+        flex-direction: column;
+    }
+    #crianca_secao_01{
+        margin: auto;
+        width: 300px;
+        height: 200px;
+    }
+    #conteudo_secao_01{
+        width: 300px;
+        padding-left: 0px;
+    }
+    #conteudo_secao_01 h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    /* fim da seção 01 */
+
+
+    /* configurando seção 02 */
+    #secao_02{
+        flex-direction: column;
+    }
+    #crianca_secao_02{
+        width: 300px;
+        height: 150px;
+        border-radius: 20px 20px 0px 0px;
+    }
+    #conteudo_secao_02{
+        width: 300px;
+        border-radius: 0px 0px 20px 20px;
+        padding-bottom: 30px;
+    }
+    /* fim da configuração da seção 02 */
+
+
+    /* configuração do rodapé */
+    #rodape{
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #coluna_01, #coluna_02, #coluna_03{
+        width: 90%;
+        height: fit-content;
+        margin-bottom: 19px;
+    }
+    #coluna_02 i{
+        margin-left: 0px ;
+    }
+    #coluna_03 img{
+        display: none;
+    }
+    /* fim da configuração do rodapé */
 }
 
-/* configuraçao para tablets */
+
+/* CONFIGURAÇÃO PARA TABLETS */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
+    
+    /* configurando a seção 01*/
+    #secao_01{
+        flex-direction: column;
+    }
+
+    #criancas_secao_01{
+        margin: auto;
+    }
+
+    #conteudo_secao_01{
+        width: 450px;
+    }
+    /* fim da configuração seção 01 */
+   
+     /* configurando a seção 02 */
+     #secao_02{
+        flex-direction: column;
+    }
+
+    #crianca_secao_02{
+        width: 450px;
+        height: 250px;
+        border-radius: 40px 40px 0px 0px;
+    }
+
+    #conteudo_secao_02{
+        width: 450px;
+        border-radius: 0px 0px 40px 40px;
+        padding-bottom: 50px;
+        
+    }
+    /* fim da configuração seção 02  */
+
+
+    /* configurando o rodapé */
+    #rodape{
+        flex-direction: column;
+    }
+
+    #coluna_01, #coluna_02, #coluna_03{
+        width: 90%;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+
+    #coluna_02{
+        text-align: left;
+    }
+
+    #coluna_03 img{
+        display: none;
+    }
+    /* fim da configuração do rodapé */
+
+
     #menu_mobile_tablet{
         display: flex;
     }
     #menu_topo{
         display: none;
     }
-}
+
+    /* configurando o tamanho dos elementos no tablet */
+    #mensagem{
+        padding: 10px;
+        width: 70%;
+        height: 200px;
+    }
+
+    #mensagem h1{
+        font-size: 30px;
+    }
+
+    #mensagem p{
+        font-size: 15px;
+    }
+
+    }
+    
+    
+
+   
+

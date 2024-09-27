@@ -6,11 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little ones</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="js_funcoes.js"></script>
+    
 </head>
 <body>
     <div id="container">
+
+        <div id="menu_lateral">
+            <h1 onclick="fecharMenu()"> x </h1>
+            <div class="item_menu menu_ativado">Home</div>
+            <div class="item_menu">Serviços</div>
+            <div class="item_menu">Sobre nós</div>
+            <div class="item_menu">Nosso time</div>
+            <div class="item_menu">Contato</div>
+        </div>
+
+
         <div id="menu_mobile_tablet">
-            <i class="fi fi-bs-menu-burger"></i>
+            <i class="fi fi-rr-menu-burger" onclick="abrirMenu()"></i>
         </div>
 
 
@@ -95,5 +108,8 @@
 
 
     </div> <!-- fim da div principal-->
+
+   
+    
 </body>
 </html>
